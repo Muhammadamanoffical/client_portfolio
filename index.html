@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alisha Fatima | Pharm.D Student</title>
+<meta name="description" content="Portfolio of Alisha Fatima, a final-year Doctor of Pharmacy student interested in clinical pharmacy, pharmacology, research and public health.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#172522; --muted:#66736e; --paper:#f7faf7; --card:#ffffff;
+  --mint:#dfeee7; --sage:#a9c8b8; --line:#dce7e1; --accent:#3e7660;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(247,250,247,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(220,231,225,.7)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;letter-spacing:.04em}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:28px;color:var(--muted);font-size:.92rem}
+.nav-links a:hover{color:var(--accent)}
+.menu{display:none;border:0;background:none;font-size:1.5rem}
+.hero{padding:150px 0 90px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.eyebrow{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+h1,h2{font-family:"Playfair Display",serif;line-height:1.1}
+h1{font-size:clamp(3.3rem,7vw,6.4rem);letter-spacing:-.05em;margin-bottom:24px}
+h1 em{font-style:normal;color:var(--accent)}
+.hero-copy{font-size:1.08rem;color:var(--muted);max-width:610px}
+.actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.btn{padding:13px 21px;border-radius:999px;border:1px solid var(--accent);font-weight:600;font-size:.92rem;transition:.2s}
+.btn.primary{background:var(--accent);color:white}
+.btn:hover{transform:translateY(-2px)}
+.hero-art{position:relative;min-height:460px;display:grid;place-items:center}
+.blob{width:380px;height:380px;border-radius:50% 45% 55% 42%;background:var(--mint);position:absolute;transform:rotate(-14deg)}
+.card-float{position:relative;background:rgba(255,255,255,.84);border:1px solid var(--line);box-shadow:0 24px 70px rgba(35,67,54,.13);padding:30px;border-radius:26px;width:min(330px,90%);z-index:1}
+.card-float .symbol{font-size:4.5rem;color:var(--accent);font-family:serif;text-align:center;margin-bottom:12px}
+.card-float h3{text-align:center;font-family:"Playfair Display",serif;font-size:1.55rem}
+.card-float p{text-align:center;color:var(--muted);font-size:.9rem;margin-top:7px}
+section{padding:95px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
+.section-head h2{font-size:clamp(2.2rem,4vw,3.7rem)}
+.section-head p{max-width:450px;color:var(--muted)}
+.about{background:#edf5f0}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+.about-card{background:var(--card);padding:30px;border:1px solid var(--line);border-radius:24px}
+.stat{padding:20px 0;border-bottom:1px solid var(--line)}
+.stat:last-child{border-bottom:0}
+.stat strong{display:block;font-size:1.5rem;color:var(--accent)}
+.stat span{color:var(--muted);font-size:.9rem}
+.about-text{font-size:1.15rem;color:#42514b}
+.timeline{display:grid;gap:20px}
+.timeline-item{display:grid;grid-template-columns:160px 1fr;gap:28px;padding:28px 0;border-bottom:1px solid var(--line)}
+.timeline-item:last-child{border-bottom:0}
+.timeline-label{color:var(--accent);font-weight:700;font-size:.9rem}
+.timeline-item h3{font-size:1.3rem;margin-bottom:7px}
+.timeline-item p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.info-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
+.info-card h3{margin-bottom:18px;font-size:1.2rem}
+.info-card ul{list-style:none;display:grid;gap:10px;color:var(--muted)}
+.info-card li::before{content:"✦";color:var(--accent);margin-right:10px}
+.project{background:var(--ink);color:white;border-radius:28px;padding:42px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.project p{color:#b8c9c1;margin-top:12px;max-width:650px}
+.project .tag{display:inline-block;background:#2c4038;color:#cce4d8;border-radius:999px;padding:8px 13px;font-size:.8rem;margin-top:22px}
+.contact{background:var(--mint)}
+.contact-box{display:flex;justify-content:space-between;gap:30px;align-items:center}
+.contact-box p{color:var(--muted);max-width:520px}
+.contact-links{display:flex;flex-wrap:wrap;gap:12px}
+.contact-links a{background:white;padding:12px 16px;border-radius:999px;border:1px solid var(--line);font-size:.9rem}
+footer{padding:28px 0;color:var(--muted);font-size:.85rem;text-align:center}
+@media(max-width:760px){
+ .nav-links{display:none}.menu{display:block}
+ .hero-grid,.about-grid{grid-template-columns:1fr;gap:40px}
+ .hero{padding-top:125px}.hero-art{min-height:360px}.blob{width:290px;height:290px}
+ .section-head{display:block}.section-head p{margin-top:15px}
+ .timeline-item{grid-template-columns:1fr;gap:8px}
+ .grid{grid-template-columns:1fr}
+ .project{grid-template-columns:1fr;padding:30px}
+ .contact-box{display:block}.contact-links{margin-top:25px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#home">AF<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#project">Project</a><a href="#contact">Contact</a>
+    </div>
+    <button class="menu" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Pharm.D Student · Healthcare Enthusiast</div>
+      <h1>Where <em>care</em> meets curiosity.</h1>
+      <p class="hero-copy">I'm Alisha Fatima, a final-year Doctor of Pharmacy student with a growing interest in clinical pharmacy, pharmacology, research and public health.</p>
+      <div class="actions">
+        <a class="btn primary" href="#experience">Explore my journey</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="blob"></div>
+      <div class="card-float">
+        <div class="symbol">⚕</div>
+        <h3>Alisha Fatima</h3>
+        <p>Doctor of Pharmacy · Class of 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-card">
+      <div class="stat"><strong>Top 15%</strong><span>of Pharm.D batch</span></div>
+      <div class="stat"><strong>2 Hospitals</strong><span>Clinical training experience</span></div>
+      <div class="stat"><strong>3 Languages</strong><span>English · Urdu · Persian</span></div>
+    </div>
+    <div>
+      <div class="eyebrow">About me</div>
+      <h2>Learning pharmacy with purpose.</h2>
+      <p class="about-text" style="margin-top:22px">I am a final-year Doctor of Pharmacy student at Jinnah University for Women, Karachi. My clinical exposure has introduced me to hospital pharmacy workflows, medication dispensing, clinical rounds and multidisciplinary healthcare environments.</p>
+      <p class="about-text" style="margin-top:18px">Alongside my academic journey, I am passionate about pharmacology, research and public health. I also enjoy exploring entrepreneurial ideas in healthcare and have developed and promoted herbal wellness products on a small scale.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Experience & education</div><h2>Building knowledge<br>through experience.</h2></div>
+      <p>From academic foundations to clinical environments, each experience has shaped my understanding of patient-centered healthcare.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item"><div class="timeline-label">2022 — 2026</div><div><h3>Doctor of Pharmacy (Pharm.D)</h3><p>Jinnah University for Women · Karachi, Pakistan<br>Among the top 15% of the batch.</p></div></div>
+      <div class="timeline-item"><div class="timeline-label">1 Month</div><div><h3>Pharmacy Intern · Patel Hospital</h3><p>Assisted pharmacists with medication dispensing and inventory management while learning hospital pharmacy workflow.</p></div></div>
+      <div class="timeline-item"><div class="timeline-label">1 Month</div><div><h3>Clinical Clerkship Trainee · Abbasi Shaheed Hospital</h3><p>Participated in clinical rounds, observed multidisciplinary healthcare teams and reviewed patient medication profiles under supervision.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background:#edf5f0">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Capabilities</div><h2>Skills that support<br>better care.</h2></div></div>
+    <div class="grid">
+      <div class="info-card"><h3>Technical skills</h3><ul><li>Medication dispensing</li><li>Prescription review</li><li>Pharmaceutical calculation</li><li>Clinical documentation</li></ul></div>
+      <div class="info-card"><h3>Professional strengths</h3><ul><li>Leadership & teamwork</li><li>Communication & public speaking</li><li>Time management</li><li>Problem solving</li></ul></div>
+      <div class="info-card"><h3>Tools & research</h3><ul><li>Microsoft Word</li><li>Microsoft Excel</li><li>Microsoft PowerPoint</li><li>Literature search</li></ul></div>
+      <div class="info-card"><h3>Languages</h3><ul><li>English — Fluent</li><li>Urdu — Native</li><li>Persian — Basic</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="project">
+  <div class="container">
+    <div class="eyebrow">Project & entrepreneurship</div>
+    <div class="project">
+      <div><h2>Herbal Potli & Physio Poultice</h2><p>A small-scale herbal wellness initiative combining product development with hands-on experience in promotion, customer interaction and sales activities.</p><span class="tag">Healthcare · Entrepreneurship · Wellness</span></div>
+      <div style="font-size:4rem">🌿</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Leadership & community</div><h2>Healthcare beyond<br>the classroom.</h2></div></div>
+    <div class="grid">
+      <div class="info-card"><h3>Breast Cancer Awareness Session</h3><p style="color:var(--muted)">Volunteer support in organizing and conducting community health awareness activities.</p></div>
+      <div class="info-card"><h3>Osteoporosis Awareness Session</h3><p style="color:var(--muted)">Supported event coordination, participant engagement and public awareness around bone health and disease prevention.</p></div>
+      <div class="info-card"><h3>Class Group Leader</h3><p style="color:var(--muted)">Coordinated assignments and presentations among group members.</p></div>
+      <div class="info-card"><h3>Certifications & participation</h3><p style="color:var(--muted)">Seminar on Improvement of Drug Dose Calculation · Business Idea Pitching Competition.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-box">
+    <div><div class="eyebrow">Let's connect</div><h2>Interested in healthcare,<br>research & impact?</h2><p style="margin-top:18px">I am always open to learning, meaningful conversations and opportunities that connect pharmacy with better healthcare outcomes.</p></div>
+    <div class="contact-links">
+      <a href="mailto:alishafatimajuw@gmail.com">Email</a>
+      <a href="tel:+923192613073">Call</a>
+      <a href="https://www.linkedin.com/in/alisha-fatima" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>© 2026 Alisha Fatima · Doctor of Pharmacy Student</footer>
+</body>
+</html>
